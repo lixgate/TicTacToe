@@ -1,0 +1,100 @@
+
+
+<TictactoeWidget>
+    BoxLayout
+        background_color: (20/255, 20/255, 30/255, 1)
+        foreground_color: (1, 1, 1, 1)
+        orientation: "vertical"
+        size: root.width, root.height
+
+        Label:
+            id: game_message
+            font_size: 40
+            text: "Игрок Х начинает"
+            size_hint: 1, .2
+
+
+        GridLayout:
+            cols: 3
+            rows: 3
+
+
+            Button:
+                id: btn1
+                text: ""
+                font_size: 75
+                on_release: app.make_turn(btn1)
+
+            Button:
+                id: btn2
+                text: ""
+                font_size: 75
+                on_release: app.make_turn(btn2)
+
+            Button:
+                id: btn3
+                text: ""
+                font_size: 75
+                on_release: app.make_turn(btn3)
+
+            Button:
+                id: btn4
+                text: ""
+                font_size: 75
+                on_release: app.make_turn(btn4)
+
+            Button:
+                id: btn5
+                text: ""
+                font_size: 75
+                on_release: app.make_turn(btn5)
+
+            Button:
+                id: btn6
+                text: ""
+                font_size: 75
+                on_release: app.make_turn(btn6)
+
+            Button:
+                id: btn7
+                text: ""
+                font_size: 75
+                on_release: app.make_turn(btn7)
+
+            Button:
+                id: btn8
+                text: ""
+                font_size: 75
+                on_release: app.make_turn(btn8)
+
+            Button:
+                id: btn9
+                text: ""
+                font_size: 75
+                on_release: app.make_turn(btn9)
+
+        GridLayout
+            cols: 1
+            rows: 3
+
+
+            Label:
+                id: game_score
+                size_hint: 1, .4
+                font_size: 40
+                text: "X: 0 | O: 0"
+                halign: "center"
+
+
+            Button:
+                id: restart_game
+                font_size: 40
+                text: "Играть ещё"
+                size_hint: 1, .2
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                on_release: app.restart_game()
+
+            Label:
+                size_hint: 1, .05
+
+
